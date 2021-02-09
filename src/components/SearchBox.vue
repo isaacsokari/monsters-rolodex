@@ -3,14 +3,18 @@
     type="search"
     className="search"
     :placeholder="placeholder"
-    :value="filter"
-    @input="$emit('input', $event.target.value)"
+    v-model="content"
   />
 </template>
 
 <script>
   export default {
-    props: ['placeholder', 'filter'],
+    props: ['placeholder', 'value'],
+    data() {
+      return {
+        content: this.$props.value,
+      };
+    },
   };
 </script>
 

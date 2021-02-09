@@ -1,7 +1,11 @@
 <template>
   <div className="App">
     <h1>Monsters Rolodex</h1>
+
     <search-box placeholder="Search Monsters" v-model="filter"></search-box>
+
+    <h3 style="color: white; margin: 3rem;">Search term: "{{ filter }}".</h3>
+
     <CardList :monsters="filteredMonsters" />
   </div>
 </template>
@@ -19,7 +23,7 @@
     computed: {
       filteredMonsters() {
         return this.monsters.filter((monster) =>
-          monster.name.includes(this.filter)
+          monster.name.toLowerCase().includes(this.filter.toLowerCase())
         );
       },
     },
