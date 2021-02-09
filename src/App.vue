@@ -2,9 +2,14 @@
   <div className="App">
     <h1>Monsters Rolodex</h1>
 
-    <search-box placeholder="Search Monsters" v-model="filter"></search-box>
+    <search-box
+      placeholder="Search Monsters by Name"
+      v-model="filter"
+    ></search-box>
 
-    <h3 style="color: white; margin: 3rem;">Search term: "{{ filter }}".</h3>
+    <h3 v-show="filter.length > 0" style="color: white; margin: 3rem;">
+      Search term: "{{ filter }}".
+    </h3>
 
     <CardList :monsters="filteredMonsters" />
   </div>
