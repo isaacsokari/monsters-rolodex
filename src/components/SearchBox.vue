@@ -18,7 +18,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .search {
     -webkit-appearance: none;
     border: 2px solid #ededed;
@@ -28,5 +28,9 @@
     width: 20rem;
     line-height: 2rem;
     margin: 2rem auto;
+
+    @media (max-width: 425px) {
+      width: 280px;
+    }
   }
 </style>

@@ -21,7 +21,7 @@
 
 <style lang="scss" scoped>
   .card-list {
-    width: 90vw;
+    width: max-content;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
