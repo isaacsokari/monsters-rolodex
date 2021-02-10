@@ -21,15 +21,16 @@
 
 <style lang="scss" scoped>
   .card-list {
-    width: max-content;
-    max-width: 90vw;
-    // margin: 0 auto;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    justify-items: center;
     overflow: hidden;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
       grid-template-columns: repeat(3, 1fr);
     }
 
