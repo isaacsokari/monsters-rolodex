@@ -18,7 +18,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .card-container {
     display: flex;
     flex-direction: column;
@@ -31,7 +31,13 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
-    width: 100%;
+    /* min-width: 280px; */
+    /* width: 90%; */
+    width: 280px;
+
+    img {
+      margin: 0 0 1rem;
+    }
   }
 
   .card-container:hover {
