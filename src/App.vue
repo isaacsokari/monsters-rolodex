@@ -7,7 +7,10 @@
       v-model="filter"
     ></search-box>
 
-    <h3 v-show="filter.length > 0" style="color: white; margin: 3rem;">
+    <h3
+      v-show="filter.length > 0"
+      style="color: white; margin: 1rem 3rem 3rem;"
+    >
       Search term: "{{ filter }}".
     </h3>
 
